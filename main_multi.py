@@ -109,11 +109,11 @@ if __name__ == "__main__":
     mp.set_start_method("spawn")  # Required for macOS
     solver = Solution()
     input_string = "candis ignite myth"
-    solutions = solver.solve_anagram_with_spaces(input_string, 2)
+    solutions = solver.solve_anagram_with_spaces(input_string)
 
     print(f"{solutions}")
 
-    desktop_path = os.path.join(os.path.expanduser("~"), "Desktop", "anagrams_solutions_2word.txt")
+    desktop_path = os.path.join(os.path.expanduser("~"), "Desktop", "anagrams_solutions.txt")
     with open(desktop_path, "w") as file:
         file.write(json.dumps(solutions))  # Write each solution on a new line
 
